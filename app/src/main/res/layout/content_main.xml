@@ -10,6 +10,18 @@
     tools:showIn="@layout/activity_main">
 
 
+    <Button
+        android:id="@+id/installation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:text="Installation"
+        app:layout_constraintTop_toBottomOf="@+id/save_btn"
+        tools:layout_editor_absoluteX="217dp" />
+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_btn" />
+
     <EditText
         android:id="@+id/txtPrenom"
         android:layout_width="wrap_content"
@@ -73,17 +85,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPrenom" />
 
     <Button
-        android:id="@+id/create_csv_file"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Créer un fichier CSV."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        android:id="@+id/reception_btn"
+        android:layout_width="121dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="64dp"
+        android:text="Reception"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/save_btn" />
+
 </android.support.constraint.ConstraintLayout>

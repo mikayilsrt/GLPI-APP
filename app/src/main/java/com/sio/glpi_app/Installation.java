@@ -8,10 +8,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
-import de.siegmar.fastcsv.reader.CsvContainer;
-import de.siegmar.fastcsv.reader.CsvReader;
-import de.siegmar.fastcsv.reader.CsvRow;
-
 public class Installation {
     private int id;
     private Date dateR;
@@ -29,6 +25,7 @@ public class Installation {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void creerCSV ()
     {
+        /*
         File file = new File("foo.csv");
         CsvReader csvReader = new CsvReader();
 
@@ -42,6 +39,7 @@ public class Installation {
             System.out.println("Read line: " + row);
             System.out.println("First column of line: " + row.getField(0));
         }
+        */
 
     }
 }

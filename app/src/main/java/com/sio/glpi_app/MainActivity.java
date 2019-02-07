@@ -1,5 +1,6 @@
 package com.sio.glpi_app;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -49,6 +50,21 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
+        final Button reception_btn = findViewById(R.id.reception_btn);
+        final Button installation_btn = findViewById(R.id.installation_btn);
+        final Button save_btn = findViewById(R.id.save_btn);
+        reception_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // code
+                reception_btn.setVisibility(View.INVISIBLE);
+                installation_btn.setVisibility(View.INVISIBLE);
+                save_btn.setVisibility(View.INVISIBLE);
+            }
+
+        });
+
     }
 
     public void Dialogue(String text){
@@ -62,18 +78,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         intent = new Intent(this, CameraActivity.class);
         startActivity(intent);
-    }
-
-    public void clickCreateCSV () {
-        Button createCSVButton = findViewById(R.id.create_csv_file);
-        createCSVButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Installation installation = new Installation();
-                installation.creerCSV();
-            }
-
-        });
     }
 
     @Override
