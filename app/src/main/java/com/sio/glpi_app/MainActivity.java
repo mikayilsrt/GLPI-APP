@@ -41,17 +41,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 nom = (EditText)findViewById(R.id.txtNom);
                 prenom = (EditText)findViewById(R.id.txtPrenom);
-                //lOperateur = new Operateur(nom.getText(), prenom.getText());
-                Dialogue();
+
+                lOperateur = new Operateur(nom.getText().toString(), prenom.getText().toString());
+                Dialogue("Connexion réussie");
+                openNewActivity();
             }
 
         });
 
     }
 
-    public void Dialogue(){
+    public void Dialogue(String text){
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this );
-        builder1.setMessage(nom.getText() + " " + prenom.getText());
+        builder1.setMessage(text);
         AlertDialog alert11 = builder1.create();
         alert11.show();
     }
@@ -60,6 +62,18 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         intent = new Intent(this, CameraActivity.class);
         startActivity(intent);
+    }
+
+    public void clickCreateCSV () {
+        Button createCSVButton = findViewById(R.id.create_csv_file);
+        createCSVButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Installation installation = new Installation();
+                installation.creerCSV();
+            }
+
+        });
     }
 
     @Override
